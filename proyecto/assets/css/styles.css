@@ -1,0 +1,446 @@
+/*-------------------*/
+/*--ESTILOS GLOBALES*/
+/*-------------------*/
+
+body {
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #33333A;
+}
+
+.texto-centrado {
+    text-align: center;
+}
+
+.imagen-centrada {
+    margin: 0 auto;
+}
+
+.imagen-mediana {
+    width: 40%;
+    max-width: 500px;
+    min-width: 250px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--negro-primario);
+}
+
+a:visited {
+    color: var(--negro-primario);
+}
+
+.boton a {
+    color: white;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.oculto {
+    display: none;
+}
+
+:root {
+    --negro-primario:  #33333A;
+    --patron-espaciado: 0 10%;
+}
+
+/*----Alineación de Secciones----*/
+.encabezado-principal,
+.vista-productos,
+.contenedor-footer,
+.contenedor-categorias,
+.contenedor-producto-unico {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--patron-espaciado);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/*-------------------*/
+/*--ENCABEZADO-------*/
+/*-------------------*/
+
+.logo h2 a {
+    color: var(--negro-primario);
+    text-decoration: none;
+}
+
+.logo h2 a:visited {
+    color: var(--negro-primario);
+}
+
+.menu-comercio {
+    display: flex;
+    align-items: center;
+}
+
+.items-menu {
+    display: flex;
+}
+
+.items-menu a {
+    color: var(--negro-primario);
+}
+
+.items-menu p {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.items-menu p:first-child {
+    margin-left: 30px;
+}
+
+.menu-usuario {
+    display: flex;
+    align-items: center;
+}
+
+.menu-usuario div {
+    cursor: pointer;
+}
+
+.menu-usuario div:not(:last-child) {
+    margin-right: 20px;
+}
+
+.perfil-usuario {
+    position: relative;
+}
+
+.menu-hover-perfil {
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    background-color: white;
+    padding: 10px 20px;
+    transition: all .3s;
+    z-index: 20;
+}
+
+.menu-hover-perfil ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu-hover-perfil li {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.menu-hover-perfil li a {
+    text-decoration: none;
+}
+
+.menu-hover-perfil li:hover {
+    text-decoration: underline;
+}
+
+/*-------------------*/
+/*--ÁREA PRINCIPAL---*/
+/*-------------------*/
+
+.imagen-hero {
+    height: 550px;
+    width: 100%;
+    background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100%), url('../img/vegan-slider.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.imagen-hero h2 {
+    color: white;
+    font-size: 3.3rem;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.verde {
+    color: #2ecc71;
+}
+
+/*-------------------*/
+/*--VISTA PRODUCTOS--*/
+/*-------------------*/
+
+.vista-productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.producto {
+    width: 90%;
+    margin-bottom: 40px;
+}
+
+.producto a {
+    color: white;
+}
+
+.imagen-producto {
+    width: 100%;
+    height: 0;
+    padding-top: 66%;
+    background-color: tomato;
+    background-image: url('../img/product1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.titulo-productos {
+    font-size: 1.7rem;
+}
+
+.titulo-producto, .titulo-productos {
+    text-align: center;
+}
+
+.boton {
+    background-color: var(--negro-primario);
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/*-------------------*/
+/*--PÁGINA PRODUCTO--*/
+/*-------------------*/
+
+.contenedor-producto-unico {
+    justify-content: center;
+    align-items: flex-start !important;
+}
+
+.imagen-destacada-producto {
+    background-image: url('../img/product1.png');
+    width: 40%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-right: 5%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.contenedor-carrito {
+    margin: 0 auto;
+}
+
+fieldset {
+    width: 75px;
+    margin-bottom: 10px;
+}
+
+fieldset input {
+    width: 20%;
+}
+
+/*-----------------------*/
+/*------MODAL LOGIN------*/
+/*-----------------------*/
+
+.contenedor-login, .contenedor-registro {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.36) 0%, rgba(0,0,0,0.3575805322128851) 100%);
+    z-index: 20;
+}
+
+.caja-login, .caja-registro {
+    display: inline-block;
+    background-color: white;
+    padding: 30px 150px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.titulo-login h3, .titulo-registro h3 {
+    margin-top: 0px;
+}
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.grupo-formulario label {
+    margin-bottom: 5px;
+}
+
+.cerrar {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.registrarse-aqui {
+    cursor: pointer;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/*-----------------------*/
+/*--ADMINISTRAR CATEGORÍAS Y PRODUCTOS--*/
+/*-----------------------*/
+
+.contenedor-categorias,
+.contenedor-crear-categoria,
+.contenedor-agregar-producto,
+.contenedor-exito {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: var(--patron-espaciado);
+}
+
+.contenedor-categorias h2, .contenedor-agregar-producto h2 {
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+}
+
+.agregar-categoria, .agregar-producto, .alinear-tabla {
+    width: 80%;
+    margin: 7px auto;
+}
+
+.agregar-categoria button, .agregar-producto button {
+    width: 18%;
+}
+
+.agregar-categoria button a, .agregar-producto button a {
+    color: white;
+    text-decoration: none !important;
+}
+
+table {
+    border: 1px solid var(--negro-primario);
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+th {
+    font-size: 1.3rem;
+}
+
+td {
+    border-top: 1px solid var(--negro-primario);
+    padding: 5px;
+}
+
+.icono-borrar {
+    margin-right: 12px;
+    color: var(--negro-primario);
+}
+
+.icono-editar {
+    color: var(--negro-primario);
+}
+
+/* Formulario de Agregar Producto */
+.formulario-agregar-producto {
+    width: 100%;
+}
+
+.texto-producto {
+    height: 100px;
+}
+
+.contenedor-exito {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.contenedor-exito h1 {
+    margin-bottom: 0px;
+}
+
+/*-----------------------*/
+/*------PIE DE PÁGINA---*/
+/*-----------------------*/
+
+.contenedor-pagina {
+    position: relative;
+    min-height: 100vh;
+}
+
+#contenido-principal {
+    padding-bottom: 230px;    /* Altura del pie de página */
+}
+
+.pie-pagina {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 230px;
+    background-color: var(--negro-primario);
+    color: white;
+}
+
+.contenedor-footer {
+    align-items: flex-start;
+}
+
+.columna-footer {
+    margin: 20px 0;
+}
+
+.pie-pagina ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pie-pagina ul li {
+    margin-bottom: 5px;
+}
+
+.grupo-formulario-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.boton-footer {
+    background-color: white;
+    color: var(--negro-primario);
+    margin-top: 10px;
+}
+
+.total {
+    display: flex;
+    align-items: center;
+}
+
+.total h3 {
+    margin-right: 10px;
+}
